@@ -40,3 +40,6 @@ ROUND(SUM(arr_del15) * 1.0 / SUM(arr_flights), 3) AS delay_rate
 FROM airline_delay
 GROUP BY year
 ORDER BY year;
+
+SELECT *
+FROM airline_delay;
