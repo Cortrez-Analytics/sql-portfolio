@@ -1,33 +1,24 @@
-SELECT *
-FROM tech_employment_2000_2025;
+**Tech Workforce Trends Analysis (SQL Project)**
 
-SELECT year,
-SUM(new_hires) AS total_hires
-FROM tech_employment_2000_2025
-GROUP BY year
-ORDER BY year;
+**Objective**
+Analyze workforce data to understand hiring, layoffs, and economic trends in the tech industry from 2000 to 2025.
 
-SELECT year,
-SUM(new_hires) AS total_hires
-FROM tech_employment_2000_2025
-GROUP BY year
-ORDER BY year;
+**Dataset**
+Tech employment dataset including company-level data on hiring, layoffs, revenue, and economic indicators.
 
-SELECT company,
-AVG(hiring_rate_pct) AS avg_hiring_rate
-FROM tech_employment_2000_2025
-GROUP BY company
-ORDER BY avg_hiring_rate DESC;
+**Key Questions**
+- How have layoffs and hiring trends changed over time?
+- Which companies experienced the largest workforce reductions?
+- How do economic factors like GDP and unemployment relate to layoffs?
+- What patterns exist in hiring and attrition rates?
 
-SELECT year,
-SUM(layoffs) AS total_layoffs,
-AVG(unemployment_rate_us_pct) AS avg_unemployment
-FROM tech_employment_2000_2025
-GROUP BY year
-ORDER BY year;
+**Key Insights**
+- Layoffs tend to increase during periods of slower GDP growth and higher unemployment  
+- Some companies show repeated layoff events, indicating ongoing workforce instability  
+- Hiring and attrition rates vary significantly across companies and time periods  
 
-SELECT company,
-AVG(revenue_billions_usd) AS avg_revenue,
-AVG(new_hires) AS avg_hiring
-FROM tech_employment_2000_2025
-GROUP BY company
+**SQL Skills Used**
+- Time-series analysis using GROUP BY (year)  
+- Aggregations (SUM, AVG)  
+- Business and economic data analysis  
+- Trend and pattern identification  
