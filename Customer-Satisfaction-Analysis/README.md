@@ -1,51 +1,24 @@
-SELECT *
-From Airline_customer_satisfaction;
+**Customer Satisfaction Analysis (SQL Project)**
 
+**Objective**
+Evaluate customer satisfaction data to identify key drivers of positive and negative customer experiences.
 
-SELECT
-"Type of Travel"
-"satisfaction",
-count(*) AS total
-From Airline_customer_satisfaction
-Group By "Type of Travel", satisfaction;
+**Dataset**
+Airline customer satisfaction dataset including service ratings, delays, and customer attributes.
 
-Select *
-From Airline_customer_satisfaction
-Limit 1;
+**Key Questions**
+- What factors most influence customer satisfaction?
+- Do delays impact customer satisfaction?
+- How do satisfaction levels vary by travel type and class?
+- Which service areas perform best and worst?
 
-PRAGMA table_info(airline_customer_satisfaction);
+**Key Insights**
+- Onboard service, cleanliness, and seat comfort were strong drivers of satisfaction  
+- Customers experiencing higher delays showed lower satisfaction levels  
+- Business class customers generally reported higher satisfaction across categories  
 
-SELECT
-"Type of Travel",
-"satisfaction",
-Count(*) AS total
-From Airline_customer_satisfaction
-Group By "Type of Travel", "satisfaction";
-
-SELECT 
-"Satisfaction",
-ROUND(AVG("Inflight wifi service"), 2) AS wifi,
-ROUND(AVG("On-board service"), 2) AS service,
-ROUND(AVG("Cleanliness"), 2) AS cleanliness,
-ROUND(AVG("Seat comfort"), 2) AS comfort,
-ROUND(AVG("Inflight entertainment"), 2) AS entertainment
-FROM airline_customer_satisfaction
-GROUP BY "Satisfaction";
-
-SELECT 
-"Class",
-COUNT(*) AS total_customers,
-ROUND(AVG("Cleanliness"),2) AS cleanliness,
-ROUND(AVG("On-board service"),2) AS service,
-ROUND(AVG("Seat comfort"),2) AS comfort
-FROM airline_customer_satisfaction
-GROUP BY "Class"
-ORDER BY total_customers DESC;
-
-SELECT 
-"Satisfaction",
-ROUND(AVG("Departure Delay in Minutes"),2) AS avg_dep_delay,
-ROUND(AVG("Arrival Delay in Minutes"),2) AS avg_arr_delay
-FROM airline_customer_satisfaction
-GROUP BY "Satisfaction";
-
+**SQL Skills Used**
+- GROUP BY and aggregations (AVG, COUNT)  
+- Segmentation analysis (customer type, class, travel type)  
+- Comparative analysis across categories  
+- Data interpretation for business insights
